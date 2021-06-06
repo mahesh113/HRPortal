@@ -1,0 +1,52 @@
+<p>users works!</p>
+<!-- Id:3,First:'Naman', Last:'Verma', Status:'Review', Email:'mahesh@gmail.com', Department: 'IT' -->
+
+
+<div class="container">
+    <div class="display-4">Update User details</div>
+    <div class="col-sm-8" style="background-color: beige;">
+      <form (ngSubmit)="onSubmit(f)"  #f="ngForm">
+        <div class="form-group">
+            <table class="table">
+
+              <tbody>
+                <tr>
+                  <td><label for="_id">Id</label></td>
+                  <!-- <td><input type="text" id='_id' class="form-control" [(ngModel)]="id"></td> -->
+                  <td>{{id}}</td>
+                </tr>
+                <tr>
+                  <td><label for="first">FirstName</label></td>
+                  <td><input type="text" id='first' name='FirstName' class="form-control" [(ngModel)]='employee.FirstName'/></td>
+                </tr>
+                <tr>
+                  <td><label for="last">LastName</label></td>   
+                  <td><input type="text" id='last' name='LastName' [(ngModel)]='employee.LastName' class="form-control" ngModel></td>
+                </tr>
+                <tr>
+                  <td><label for="email">Email</label></td>   
+                  <td><input type="text" id='email' name='EmailId' [(ngModel)]='employee.EmailId' class="form-control" ngModel></td>
+                </tr>
+                <tr>
+                  <td><label for="ph">Mobile</label></td>   
+                  <td><input type="text" id='ph' name='Mobile' [(ngModel)]='employee.Mobile' class="form-control" ngModel></td>
+                </tr>
+                <tr>
+                  <td><label for="department">Department</label></td>
+                  <!-- <td><input type=" range" id='department' class="form-control" [(ngModel)]="department"></td> -->
+                  <td>
+                      <select class='form-control' name='   Department' [(ngModel)]='employee.Department' id='department' ngModel>
+                          <option value=1>Finance</option>
+                          <option value=2>Lending</option>
+                          <option value=3>Collection</option>
+                      </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button type="submit" class="form-control" class="btn btn-primary">Submit</button>
+              
+        </div>
+      </form>
+    </div>
+</div>

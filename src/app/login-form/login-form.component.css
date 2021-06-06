@@ -1,0 +1,7 @@
+.error{
+    color: red;
+    background-color: seashell;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    width:fit-content;
+}
